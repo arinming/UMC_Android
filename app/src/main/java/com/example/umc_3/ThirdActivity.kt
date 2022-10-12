@@ -1,6 +1,7 @@
 package com.example.umc_3
 
 import android.os.Bundle
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.umc_3.databinding.ActivityThirdBinding
 
@@ -31,5 +32,11 @@ class ThirdActivity : AppCompatActivity() {
                 .replace(viewBinding.frameFragment.id, SecondFragment())
                 .commitAllowingStateLoss()
         }
+
+        supportFragmentManager
+            .setFragmentResultListener("requestKey", this) { _ , bundle ->
+                val result = bundle.getString("bundleKey")
+                Toast.makeText(applicationContext, result, Toast.LENGTH_SHORT).show();
+            }
     }
 }
