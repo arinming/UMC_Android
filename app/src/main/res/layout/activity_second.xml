@@ -25,4 +25,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_secondtext" />
+
+    <Button
+        android:id="@+id/btn_next3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="mainActivity로 넘어가기"
+        android:onClick="onButton3Clicked"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_next2" />
 </androidx.constraintlayout.widget.ConstraintLayout>

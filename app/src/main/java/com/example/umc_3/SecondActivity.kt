@@ -4,6 +4,7 @@ package com.example.umc_3
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import com.example.umc_3.databinding.ActivitySecondBinding
 
 class SecondActivity : AppCompatActivity() {
@@ -26,6 +27,14 @@ class SecondActivity : AppCompatActivity() {
 
         }
 
+        viewBinding.btnNext3.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java).apply {
+                Toast.makeText(applicationContext, "Back", Toast.LENGTH_SHORT).show();
+            }
+            setResult(RESULT_OK, intent)
+            if (!isFinishing) finish()
+        }
 
     }
+
 }
